@@ -219,6 +219,11 @@ nav div.search {
   color: #51a8d1;
 }
 
+.section_G__shape--button:hover {
+  background-color: #51a8d1;
+  color: white;
+}
+
 .footer {
   position: fixed;
   background-color: #1c2646;

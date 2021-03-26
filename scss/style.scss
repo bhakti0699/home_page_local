@@ -232,6 +232,11 @@ nav div.search
             text-align: center;
             color: #51a8d1;
         }
+        &--button:hover
+        {
+            background-color: #51a8d1;
+            color: white;
+        }
     }
 }
 
