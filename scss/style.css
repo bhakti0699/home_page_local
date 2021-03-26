@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+.nav-item a {
+  font-family: NunitoSans;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+nav div.search {
+  width: 250px;
+}
+
+.section_A__label {
+  opacity: 0.9;
+  font-family: NunitoSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_A__label::after {
+  content: 'suggested by your personal interest';
+  opacity: 0.4;
+  font-family: NunitoSans;
+  font-size: 18px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  float: right;
+  color: var(--dark);
+}
+
+.section_A__label-sec {
+  font-family: NunitoSans;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b7bac2;
+}
+
+.section_B__main {
+  border-radius: 3px;
+  border: solid 1.3px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(79, 88, 106, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(79, 88, 106, 0.15);
+}
+
+.section_B__main--label {
+  font-family: NunitoSans;
+  font-size: 20px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_B__main--text {
+  opacity: 0.6;
+  font-family: NunitoSans;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_B__main--date-time::before {
+  content: '23 Mar';
+  opacity: 0.6;
+  font-family: NunitoSans;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_B__main--date-time::after {
+  content: '4 min read';
+  opacity: 0.6;
+  font-family: NunitoSans;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_E {
+  background-color: #e4f9f6;
+}
+
+.section_E__text {
+  opacity: 0.2;
+  font-family: NunitoSans;
+  font-size: 16px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--dark);
+}
+
+.section_E__label {
+  font-family: NunitoSans;
+  font-size: 18px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #51a8d1;
+  float: left;
+}
+
+.section_E__text:hover {
+  font-size: 20px;
+  color: brown;
+}
+
+.section_F {
+  background-color: #f7f8fa;
+}
+
+.section_F__label {
+  font-family: NunitoSans;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b7bac2;
+}
+
+.section_G {
+  background-color: #e4f9f6;
+}
+
+.section_G__shape {
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.section_G__shape--text {
+  opacity: 0.9;
+  font-family: NunitoSans;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark);
+}
+
+.section_G__shape--label {
+  opacity: 0.3;
+  font-family: NunitoSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--dark);
+}
+
+.section_G__shape--label::before {
+  content: '5.3k followers';
+}
+
+.section_G__shape--label::after {
+  content: '43 followings';
+}
+
+.section_G__shape--button {
+  border-radius: 20px;
+  border: solid 1px #51a8d1;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #51a8d1;
+}
+
+@media only screen and (max-width: 768px) {
+  nav div.search {
+    width: 190px;
+    padding-right: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
