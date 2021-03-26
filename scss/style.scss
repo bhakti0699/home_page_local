@@ -234,11 +234,56 @@ nav div.search
         }
     }
 }
+
+.footer
+{
+    position: fixed;
+    background-color:#1c2646;
+}
+.footer .footer-text
+{
+    opacity: 0.7;
+    font-family: NunitoSans-Regular;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color:#ffffff;
+}
+.social_icons
+{
+    justify-content: end;
+    color: #ffffff;
+    text-align: end;
+}
 @media only screen and (max-width:768px)
 {
     nav div.search
     {
         width:190px;
         padding-right: 10px;
+    }
+    .section_G
+    {
+        .col-md-3
+        {
+            padding-bottom: 15px;
+        }
+        &__shape
+        {
+            width: 250px;
+            height: 250px;
+            margin: auto auto auto auto;
+        }
+    }
+    .footer .footer-text
+    {
+        text-align: center;
+    }
+    .footer .social_icons
+    {
+        text-align: center;
     }
 }
