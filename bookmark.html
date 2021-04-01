@@ -12,7 +12,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        @media only screen and (max-width:768px)
+        {
+
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -83,14 +90,71 @@
 <script>
     $(document).ready(function()
     {
+        show();
+        $('[data-toggle="tooltip"]').tooltip();
+            var bookmarks=localStorage.getItem("bookmarks");
+            var bookmark=JSON.parse(bookmarks);
+            bookmark.forEach(function(item)
+            {
+                $("img.save").each(function()
+                {
+                    id=$(this).attr("id");
+                    if(item.id==id && item.bookmark_fill=="true")
+                    {
+                        $(this).attr("src","img/bookmark.svg");
+                    }
+                });
+            });
+            $("figure").click(function(event)
+            {
+                if(event.target.className=="save")
+                {
+                    var main=$(this).find("img.save").attr("id");
+                    var bookmarks=localStorage.getItem("bookmarks");
+                    if(bookmarks==null)
+                    {
+                        bookmark=[];
+                    }
+                    else
+                    {   
+                        bookmark=JSON.parse(bookmarks);
+                    }
+                    let index=bookmark.findIndex(item => item.id == main);
+                    if(index>=0)
+                    {
+                        if(bookmark[index].id==main)
+                        {
+                            bookmark.splice(index,1);
+                            localStorage.setItem("bookmarks", JSON.stringify(bookmark));
+                        }
+                    }
+                    show();
+            }
+        });
+    });
+    function show()
+    {
         let html=``;
         var bookmarks=localStorage.getItem("bookmarks");
         var bookmark=JSON.parse(bookmarks);
         bookmark.forEach(function(item)
         {
-            html+=`<div class='col-lg-6 col-md-5 col-6 pb-5'><img class='img-fluid img-thumbnail' src='${item.url}' style='height:200px;width:500px'></div>`;
+            html+=`<div class="col-md-6 col-6">
+                    <figure class="section_B__main pb-2">
+                        <a href="#"><img src="${item.url}" class="img-fluid main w-100" style='height:200px;'></a>
+                            <figcaption class="section_B__main--label p-2">
+                                ${item.text}
+                            </figcaption>
+                            <span class="section_B__main--text px-2">${item.name}</span>
+                            <span class="section_B__main--date-time px-2 float-right"><img src="img/dot.svg"></span>
+                            <div class="card-img-overlay">
+                                <a class="float-right px-3" href="#" data-toggle="tooltip" title="More"><img src="img/more.svg"></a>
+                                <a class="float-right px-3 save_link" href="#" data-toggle="tooltip" title="Save"><img src="img/bookmark1.svg" class="save" id="${item.id}"></a>
+                            </div>
+                    </figure>
+                </div>`;
         });
         $(".gallary").append(html);
-    });
+    }
 </script>
 </html>
