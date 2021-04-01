@@ -564,7 +564,6 @@
                 {
                     if(bookmark[index].id==main)
                     {
-                        alert(main);
                         bookmark.splice(index,1);
                         localStorage.setItem("bookmarks", JSON.stringify(bookmark));
                         show();
@@ -572,7 +571,6 @@
                 }
                 else
                 {
-                    alert("clicked");
                     bookmark.push({'url':src,'bookmark_fill':'true','id':main,'text':text,'name':name});
                     localStorage.setItem("bookmarks", JSON.stringify(bookmark));
                     show();
